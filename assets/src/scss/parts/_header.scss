@@ -1,16 +1,52 @@
 .header {
+  height: 100vh;
+  padding-top: rem-calc(43);
   background-color: $color_2;
   @include bg-img('img/layer-4.png');
-  &__container {
-    min-height: 500px;
+  &__row {
+    @include flex-grid-column(12 , 15);
+    @include flex-grid-row();
   }
-  &__navigation {
-    padding-top: 42px;
+  &__logo-wrap {
+    @include flex-grid-column(6);
+  }
+  &__logo {
+    transition: all .3s ease;
+    display: inline-block;
+    @include breakpoint(xs) {
+      &--transform {
+        transform: translateX(-43%) rotate(-90deg);
+      }
+    }
   }
   &__menu-icon {
+    @include flex-grid-column(6);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+  }
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: lightblue;
+    transform: translateX(300px);
+    transition: all 0.3s;
+    @include breakpoint(xs) {
+      width: 250px;
+      transform: translateX(250px);
+    }
+    &--show {
+      transform: translateX(0);
+    }
+    a {
+      background-color: transparent;
+    }
+  }
+  &__navigation {
+    padding-top: 42px;
   }
   &__info {
     display: flex;

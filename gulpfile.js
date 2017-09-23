@@ -1,10 +1,16 @@
-var gulp = require('gulp'),
+var $ = require('gulp-load-plugins')();
+    gulp = require('gulp'),
     concat = require('gulp-concat'),
     cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer');
+var wiredep = require('wiredep')({
+    directory: './assets/components',
+    exclude: [/jquery/, /less/]
+});
+var PATHS = wiredep;
 
 gulp.task('javascript', function () {
     return gulp.src(['./assets/src/js/plugins/*.js', './assets/src/js/scripts.js'])
@@ -15,6 +21,9 @@ gulp.task('javascript', function () {
 gulp.task('sass', function () {
     gulp.src('./assets/src/scss/style.scss')
         .pipe(sourcemaps.init())
+        .pipe($.sass({
+            includePaths: PATHS.scss
+        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

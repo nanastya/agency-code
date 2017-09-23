@@ -6,16 +6,133 @@
   <title>Gulp Test Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/dist/style.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!--<link rel="stylesheet" href="assets/components/foundation-sites/dist/css/foundation-sites.css">-->
 </head>
 
 <body>
 
 <header class="header">
 
-  <a href="contact.html">Contact</a>
+  <nav class="header__row">
 
-  <script src="assets/components/jquery/dist/jquery.min.js"></script>
-  <script src="assets/dist/global.js"></script>
+    <div class="header__logo-wrap">
+      <a href="index.html" class="header__logo logo">Acad.</a>
+    </div>
+
+    <div class="header__menu-icon">
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+      </div>
+    </div>
+
+    <div class="header__menu">
+      <ul class="vertical menu" data-drilldown data-parent-link="true" style="width: 200px" id="m1">
+        <li>
+          <a href="#0">Item 1</a>
+          <ul class="vertical menu" id="m2">
+            <li>
+              <a href="#0">Item 1A</a>
+              <ul class="vertical menu" id="m3">
+                <li><a href="#0">Item 1Aa</a></li>
+                <li><a href="#0">Item 1Ba</a></li>
+                <li><a href="#0">Item 1Ca</a></li>
+                <li><a href="#0">Item 1Da</a></li>
+                <li><a href="#0">Item 1Ea</a></li>
+              </ul>
+            </li>
+            <li><a href="#0">Item 1B</a></li>
+            <li><a href="#0">Item 1C</a></li>
+            <li><a href="#0">Item 1D</a></li>
+            <li><a href="#0">Item 1E</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#0">Item 2</a>
+          <ul class="vertical menu">
+            <li><a href="#0">Item 2A</a></li>
+            <li><a href="#0">Item 2B</a></li>
+            <li><a href="#0">Item 2C</a></li>
+            <li><a href="#0">Item 2D</a></li>
+            <li><a href="#0">Item 2E</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#0">Item 3</a>
+          <ul class="vertical menu">
+            <li><a href="#0">Item 3A</a></li>
+            <li><a href="#0">Item 3B</a></li>
+            <li><a href="#0">Item 3C</a></li>
+            <li><a href="#0">Item 3D</a></li>
+            <li><a href="#0">Item 3E</a></li>
+          </ul>
+        </li>
+        <li><a href='#0'> Item 4</a></li>
+      </ul>
+    </div>
+
+  </nav>
+  <!-- /.header__navigation .row-->
+
+</header>
+
+<main>
+  <section class="txt-cols-img">
+    <div class="txt-cols-img__row txt-cols-img__row--center">
+
+      <div class="title-section">
+        <h1 class="title-section__title">why choose us</h1>
+        <p class="title-section__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+    </div>
+    <div class="txt-cols-img__row">
+
+      <div class="icon-txt-two-cols txt-cols-img__text-wrap">
+        <div class="icon-txt-two-cols__col">
+          <!--<img class="icon-txt-two-cols__icon" src="assets/dist/img/inf.svg" alt="">-->
+          <i class="icon ion-ios-infinite-outline"></i>
+          <h2 class="icon-txt-two-cols__title">unlimited options</h2>
+          <p class="icon-txt-two-cols__text">Branding <br> Design & Copywriting <br> Concept development <br> User
+            Experience</p>
+        </div>
+
+        <div class="icon-txt-two-cols__col">
+          <!--<img class="icon-txt-two-cols__icon" src="assets/dist/img/arrows.svg" alt="">-->
+          <i class="icon ion-ios-shuffle"></i>
+          <h2 class="icon-txt-two-cols__title">DESIGN & DEVELOPMENT</h2>
+          <p class="icon-txt-two-cols__text">Branding <br> Design & Copywriting <br> Concept development <br> User Experience</p>
+        </div>
+
+        <div class="icon-txt-two-cols__col">
+          <!--<img class="icon-txt-two-cols__icon" src="assets/dist/img/cart.svg" alt="">-->
+          <i class="icon ion-ios-cart-outline"></i>
+          <h2 class="icon-txt-two-cols__title">e-commerce</h2>
+          <p class="icon-txt-two-cols__text">Branding <br> Design & Copywriting <br> Concept development <br> User Experience</p>
+        </div>
+
+        <div class="icon-txt-two-cols__col">
+          <!--<img class="icon-txt-two-cols__icon" src="assets/dist/img/range.svg" alt="">-->
+          <i class="icon ion-ios-settings"></i>
+          <h2 class="icon-txt-two-cols__title">CUSTOMIZABLE DESIGN</h2>
+          <p class="icon-txt-two-cols__text">Branding <br> Design & Copywriting <br> Concept development <br> User Experience</p>
+        </div>
+
+      </div>
+
+      <div class="txt-cols-img__image-wrap">
+        <img src="assets/dist/img/about-img3.png" alt="" class="txt-cols-img__image">
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="assets/components/jquery/dist/jquery.min.js"></script>
+<script src="assets/components/what-input/dist/what-input.min.js"></script>
+<script src="assets/components/foundation-sites/dist/js/foundation.min.js"></script>
+<script src="assets/dist/global.js"></script>
 
 </body>
 </html>

@@ -17,35 +17,35 @@
     background-color: darken($bg-color, 15%);
   }
 }
-// Breakpoints (Example: @include breakpoint(tablet) { YOUR CODE GOES HERE } )
+//Foundation Breakpoints
 @mixin breakpoint($point) {
-  // Extra small devices (320px +)
-  @if $point==xs {
-    @media only screen and (min-width: 320px) and (max-width: 767px) {
+  /* Small only */
+  @if $point == xs {
+    @media screen and (max-width: 39.9375em) {
       @content;
     }
   }
-  // Small devices (480px +)
-  @else if $point==sm {
-    @media only screen and (min-width: 480px) {
+    /* Medium and up */
+  @else if $point == sm {
+    @media screen and (min-width: 40em) {
       @content;
     }
   }
-  // Tablets (768px +)
-  @else if $point==tb {
-    @media only screen and (min-width: 768px) {
+    /* Medium only */
+  @else if $point == tb {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
       @content;
     }
   }
-  // Medium Devices, Notebooks (992px +)
-  @else if $point==md {
-    @media only screen and (min-width: 992px) {
+    /* Large and up */
+  @else if $point == md {
+    @media screen and (min-width: 64em) {
       @content;
     }
   }
-  // Large Devices, Wide Screens
-  @else if $point==desktop {
-    @media only screen and (min-width: 1200px) {
+    /* Large only */
+  @else if $point == desktop {
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
       @content;
     }
   }
@@ -67,7 +67,12 @@
   background-size: cover;
 }
 
-
+@mixin flex-col() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+}
 
 
 
