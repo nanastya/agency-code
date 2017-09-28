@@ -1,0 +1,33 @@
+.blog-page {
+  padding-top: rem-calc(150);
+  padding-bottom: rem-calc(52);
+  &__row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row();
+  }
+  &__article {
+    margin-bottom: rem-calc(100);
+  }
+  &__content {
+    @include flex-grid-column(9);
+    padding-right: 75px;
+    @include breakpoint ( tb ) {
+      padding-right: 30px;
+    }
+    @include breakpoint ( xs ) {
+      padding-right: 0;
+      @include flex-grid-column(12);
+    }
+  }
+  &__sidebar {
+    @include flex-grid-column(3);
+    padding-left: 75px;
+    @include breakpoint ( tb ) {
+      padding-left: 30px;
+    }
+    @include breakpoint ( xs ) {
+      padding-left: 0;
+      @include flex-grid-column(12);
+    }
+  }
+}
