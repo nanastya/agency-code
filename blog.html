@@ -194,29 +194,53 @@
       <!-- /.search -->
       <section class="posts">
         <h3 class="posts__title">Posts</h3>
-        <ul class="tabs">
-          <li class="tabs__item">Latest</li>
-          <li class="tabs__item">Popular</li>
-          <li class="tabs__item">Comments</li>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs__item tabs-title is-active"><a class="link" href="#tab1">Latest</a></li>
+          <li class="tabs__item tabs-title "><a class="link" href="#tab2">Popular</a></li>
+          <li class="tabs__item tabs-title"><a class="link" href="#tab3">Comments</a></li>
         </ul>
-        <ul class="tabs-content">
-          <li class="tabs-content__item">
+        <ul class="tabs-content" data-tabs-content="example-tabs">
+          <li class="tabs-content__item tabs-panel is-active" id="tab1">
             <section class="icon-title-meta">
               <img src="assets/dist/img/layer-5.png" alt="Post">
               <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
             </section>
-          </li>
-          <!-- /.tabs-content__item -->
-          <li class="tabs-content__item">
             <section class="icon-title-meta">
               <img src="assets/dist/img/layer-5.png" alt="Post">
               <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
             </section>
-          </li>
-          <!-- /.tabs-content__item -->
-          <li class="tabs-content__item">
             <section class="icon-title-meta">
               <img src="assets/dist/img/layer-9.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+          </li>
+          <!-- /.tabs-content__item -->
+          <li class="tabs-content__item tabs-panel" id="tab2">
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-9.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-5.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-5.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+          </li>
+          <!-- /.tabs-content__item -->
+          <li class="tabs-content__item tabs-panel" id="tab3">
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-5.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-9.png" alt="Post">
+              <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
+            </section>
+            <section class="icon-title-meta">
+              <img src="assets/dist/img/layer-5.png" alt="Post">
               <time class="meta__time" datetime="2015-10-13T19:00">3th October, 12</time>
             </section>
           </li>

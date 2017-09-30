@@ -1,0 +1,21 @@
+.tabs {
+  padding-left: 0;
+  display: flex;
+  border: none;
+  &__item {
+    border-bottom: 2px solid transparentize(grey, .5);
+    &.is-active {
+      border-bottom: 2px solid green;
+    }
+    > a {
+      padding: 20px;
+      &:focus,
+      &[aria-selected='true']{
+        background: transparent;
+      }
+    }
+  }
+  //&__link {
+  //  padding: 0;
+  //}
+}
